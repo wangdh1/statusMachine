@@ -10,6 +10,7 @@ import com.github.jettyrun.status.machine.factory.StatusMachineFactory;
  */
 public class AnnualLeaderPermitingStatusHandler extends StatusHandler{
 
+    @Override
     protected void doHandler(LeavePermit leavePermit){
         System.out.println(String.format("user:%s--领导审批年休假中--leavePermit status:%s",leavePermit.getUser(),leavePermit.getStatus().getStatus()));
     }

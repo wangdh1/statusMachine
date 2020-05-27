@@ -8,6 +8,7 @@ import com.github.jettyrun.status.handle.StatusHandler;
  */
 public class AnnualCEOPermitModifyStatusHandler extends StatusHandler{
 
+    @Override
     protected void doHandler(LeavePermit leavePermit){
         System.out.println(String.format("user:%s--ceo退回年休假单补充材料--leavePermit status:%s",leavePermit.getUser()));
     }

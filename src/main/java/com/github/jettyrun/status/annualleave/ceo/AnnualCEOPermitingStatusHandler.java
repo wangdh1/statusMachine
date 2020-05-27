@@ -11,11 +11,13 @@ import com.github.jettyrun.status.machine.factory.StatusMachineFactory;
 public class AnnualCEOPermitingStatusHandler extends StatusHandler{
 
 
+    @Override
     protected void doHandler(LeavePermit leavePermit){
         System.out.println(String.format("user:%s--ceo审批年休假中--leavePermit status:%s",leavePermit.getUser(),leavePermit.getStatus().getStatus()));
 
     }
 
+    @Override
     protected void after(LeavePermit leavePermit){
        if(leavePermit.getEvent()==null){
            //还未审批，状态机结束，等待审批意见
